@@ -57,53 +57,56 @@ float compound_interest(long int principle, int interest_rate, int time_period, 
 
 int main(void)
 {
+  printf("-------------------- is_even --------------------");
   int number_for_even;
-  
+  printf("\nEnter a number for is_even \n");
+  scanf("%d", &number_for_even);
+  printf("\nThe number %d is %s \n", number_for_even, is_even(number_for_even) ? "even" : "not even");
+
+  printf("-------------------- is_odd --------------------");
   int number_for_odd;
+  printf("\nEnter a number for is_odd \n");
+  scanf("%d", &number_for_odd);
+  printf("\nThe number %d is %s \n", number_for_odd, is_odd(number_for_odd) ? "odd" : "not odd");
 
+  printf("-------------------- square --------------------");
   int number_for_square;
+  printf("\nEnter a number for square \n");
+  scanf("%d", &number_for_square);
+  printf("\nSquare of %d is %d \n", number_for_square, square(number_for_square));
 
+  printf("-------------------- cube --------------------");
   int number_for_cube;
+  printf("\nEnter a number for cube \n");
+  scanf("%d", &number_for_cube);
+  printf("\nCube of %d is %d \n", number_for_cube, cube(number_for_cube));
 
+  printf("-------------------- average --------------------");
   int number_one_for_average;
   int number_two_for_average;
   int number_three_for_average;
-
-  int number_one_for_greatest;
-  int number_two_for_greatest;
-  int number_three_for_greatest;
-
-  long int principle_amount_for_SI;
-  int rate_of_interest_for_SI;
-  int time_period_for_SI;
-  
-  long int principle_amount_for_CI;
-  int rate_of_interest_for_CI;
-  int time_period_for_CI;
-  int compounds_per_year_for_CI;
-
-  printf("\nEnter a number for is_even \n");
-  scanf("%d", &number_for_even);
-
-  printf("\nEnter a number for is_odd \n");
-  scanf("%d", &number_for_odd);
-
-  printf("\nEnter a number for square \n");
-  scanf("%d", &number_for_square);
-
-  printf("\nEnter a number for cube \n");
-  scanf("%d", &number_for_cube);
-
   printf("\nEnter 3 numbers two calculate average \n");
   scanf("%d", &number_one_for_average);
   scanf("%d", &number_two_for_average);
   scanf("%d", &number_three_for_average);
+  printf("\nAverage of %d %d %d", number_one_for_average, number_two_for_average, number_three_for_average);
+  printf("s %f \n", average(number_one_for_average, number_two_for_average, number_three_for_average));
 
+  printf("-------------------- greatest of 3 --------------------");
+  int number_one_for_greatest;
+  int number_two_for_greatest;
+  int number_three_for_greatest;
   printf("\nEnter 3 numbers two find greatest of those numbers \n");
   scanf("%d", &number_one_for_greatest);
   scanf("%d", &number_two_for_greatest);
   scanf("%d", &number_three_for_greatest);
+  printf("\nGreatest of %d %d %d", number_one_for_greatest, number_two_for_greatest, number_three_for_greatest);
+  printf(" is %d \n", greatest_of_three(number_one_for_greatest, number_two_for_greatest, number_three_for_greatest));
 
+  printf("-------------------- simple interest --------------------");
+  long int principle_amount_for_SI;
+  int rate_of_interest_for_SI;
+  int time_period_for_SI;
   printf("\nEnter the required data to calculate Simple Interest \n");
   printf("Enter principle amount for Simple Interest in Rs.\n");
   scanf("%ld", &principle_amount_for_SI);
@@ -111,7 +114,17 @@ int main(void)
   scanf("%d", &rate_of_interest_for_SI);
   printf("Enter time period for Simple Interest in years\n");
   scanf("%d", &time_period_for_SI);
+  printf("\nSimple Interest for \n");
+  printf(" Principle Amount %ld \n", principle_amount_for_SI);
+  printf(" Rate of Interest %d \n", rate_of_interest_for_SI);
+  printf(" Time Period %d years \n", time_period_for_SI);
+  printf("is %f \n", simple_interest(principle_amount_for_SI, rate_of_interest_for_SI, time_period_for_SI));
 
+  printf("-------------------- compound interest --------------------");
+  long int principle_amount_for_CI;
+  int rate_of_interest_for_CI;
+  int time_period_for_CI;
+  int compounds_per_year_for_CI;
   printf("\nEnter the required data to calculate Compound Interest \n");
   printf("Enter principle amount for Compound Interest in Rs.\n");
   scanf("%ld", &principle_amount_for_CI);
@@ -121,13 +134,10 @@ int main(void)
   scanf("%d", &time_period_for_CI);
   printf("Enter number of compounds per year for Compound Interest \n");
   scanf("%d", &compounds_per_year_for_CI);
-
-  printf("\nThe number %d is %s \n", number_for_even, is_even(number_for_even) ? "even" : "not even");
-  printf("The number %d is %s \n", number_for_odd, is_odd(number_for_odd) ? "odd" : "not odd");
-  printf("Square of %d is %d \n", number_for_square, square(number_for_square));
-  printf("Cube of %d is %d \n", number_for_cube, cube(number_for_cube));
-  printf("Average of %d %d %d is %f \n", number_one_for_average, number_two_for_average, number_three_for_average, average(number_one_for_average, number_two_for_average, number_three_for_average));
-  printf("Greatest of %d %d %d is %d \n", number_one_for_greatest, number_two_for_greatest, number_three_for_greatest, greatest_of_three(number_one_for_greatest, number_two_for_greatest, number_three_for_greatest));
-  printf("Simple Interest of Principle Amount %ld Rate of Interest %d and Time Period %d years is %f \n", principle_amount_for_SI, rate_of_interest_for_SI, time_period_for_SI, simple_interest(principle_amount_for_SI, rate_of_interest_for_SI, time_period_for_SI));
-  printf("Compound Interest of Principle Amount %ld Rate of Interest %d number of compounds in year %d and Time Period %d years is %f \n", principle_amount_for_CI, rate_of_interest_for_CI, compounds_per_year_for_CI, time_period_for_CI, compound_interest(principle_amount_for_CI, rate_of_interest_for_CI, time_period_for_CI, compounds_per_year_for_CI));
+  printf("\nCompound Interest for \n");
+  printf(" Principle Amount %ld \n", principle_amount_for_CI);
+  printf(" Rate of Interest %d \n", rate_of_interest_for_CI);
+  printf(" Time Period %d years \n", time_period_for_CI);
+  printf(" No of Compounds in year %d \n", compounds_per_year_for_CI);
+  printf("is %f \n", compound_interest(principle_amount_for_CI, rate_of_interest_for_CI, time_period_for_CI, compounds_per_year_for_CI));
 }
