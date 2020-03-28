@@ -42,6 +42,12 @@ int greatest_of_three(int number_one, int number_two, int number_three)
   return greatest_of_two(greatest_of_two(number_one, number_two), number_three);
 }
 
+float simple_interest(long int principle, int interest_rate, int time_period);
+float simple_interest(long int principle, int interest_rate, int time_period)
+{
+  return (principle * interest_rate * time_period) / 100.00;
+}
+
 int main(void)
 {
   int number_for_even;
@@ -54,6 +60,9 @@ int main(void)
   int number_one_for_greatest;
   int number_two_for_greatest;
   int number_three_for_greatest;
+  long int principle_amount_for_SI;
+  int rate_of_interest_for_SI;
+  int time_period_for_SI;
 
   printf("\nEnter a number for is_even \n");
   scanf("%d", &number_for_even);
@@ -77,10 +86,19 @@ int main(void)
   scanf("%d", &number_two_for_greatest);
   scanf("%d", &number_three_for_greatest);
 
+  printf("\nEnter the required data to calculate Simple Interest \n");
+  printf("Enter principle amount for Simple Interest in Rs.\n");
+  scanf("%ld", &principle_amount_for_SI);
+  printf("Enter rate of interest for Simple Interest \n");
+  scanf("%d", &rate_of_interest_for_SI);
+  printf("Enter time period for Simple Interest in years\n");
+  scanf("%d", &time_period_for_SI);
+
   printf("\nThe number %d is %s \n", number_for_even, is_even(number_for_even) ? "even" : "not even");
   printf("The number %d is %s \n", number_for_odd, is_odd(number_for_odd) ? "odd" : "not odd");
   printf("Square of %d is %d \n", number_for_square, square(number_for_square));
   printf("Cube of %d is %d \n", number_for_cube, cube(number_for_cube));
   printf("Average of %d %d %d is %f \n", number_one_for_average, number_two_for_average, number_three_for_average, average(number_one_for_average, number_two_for_average, number_three_for_average));
   printf("Greatest of %d %d %d is %d \n", number_one_for_greatest, number_two_for_greatest, number_three_for_greatest, greatest_of_three(number_one_for_greatest, number_two_for_greatest, number_three_for_greatest));
+  printf("Simple Interest of Principle Amount %ld Rate of Interest %d and Time Period %d years is %f \n", principle_amount_for_SI, rate_of_interest_for_SI, time_period_for_SI, simple_interest(principle_amount_for_SI, rate_of_interest_for_SI, time_period_for_SI));
 }
