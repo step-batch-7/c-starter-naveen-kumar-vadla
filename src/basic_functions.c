@@ -67,6 +67,28 @@ float convert_to_fahrenheit(int temperature)
   return temperature * (9.00 / 5.00) + 32;
 }
 
+int smallest_of_two(int number_one, int number_two);
+int smallest_of_two(int number_one, int number_two)
+{
+  return number_one < number_two ? number_one : number_two;
+}
+
+int gcd(int number_one, int number_two);
+int gcd(int number_one, int number_two)
+{
+  int divident = greatest_of_two(number_one, number_two);
+  int divisor = smallest_of_two(number_one, number_two);
+  int remainder = divisor;
+  while (remainder > 0)
+  {
+    int previous_divisor = divisor;
+    divisor = remainder;
+    remainder = divident % divisor;
+    divident = previous_divisor;
+  }
+  return divisor;
+}
+
 int main(void)
 {
   printf("-------------------- is_even --------------------");
@@ -166,4 +188,13 @@ int main(void)
   scanf("%d", &temperature_in_centigrade);
   printf("\nTemperature in Fahrenheit for centigrade temperature %d ", temperature_in_centigrade);
   printf("is %f F\n", convert_to_fahrenheit(temperature_in_centigrade));
+
+  printf("-------------------- greatest common divisor (GCD) --------------------");
+  int number_one_for_gcd;
+  int number_two_for_gcd;
+  printf("\nEnter 2 numbers two find greatest coomon divisor (GCD) of those numbers \n");
+  scanf("%d", &number_one_for_gcd);
+  scanf("%d", &number_two_for_gcd);
+  printf("\nGreatest Common Divisor (GCD) of %d %d ", number_one_for_gcd, number_two_for_gcd);
+  printf("is %d \n", gcd(number_one_for_gcd, number_two_for_gcd));
 }
