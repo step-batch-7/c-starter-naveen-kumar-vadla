@@ -89,6 +89,12 @@ int gcd(int number_one, int number_two)
   return divisor;
 }
 
+int lcm(int number_one, int number_two);
+int lcm(int number_one, int number_two)
+{
+  return (number_one * number_two) / gcd(number_one, number_two);
+}
+
 int main(void)
 {
   printf("-------------------- is_even --------------------");
@@ -192,9 +198,18 @@ int main(void)
   printf("-------------------- greatest common divisor (GCD) --------------------");
   int number_one_for_gcd;
   int number_two_for_gcd;
-  printf("\nEnter 2 numbers two find greatest coomon divisor (GCD) of those numbers \n");
+  printf("\nEnter 2 numbers two find greatest common divisor (GCD) of those numbers \n");
   scanf("%d", &number_one_for_gcd);
   scanf("%d", &number_two_for_gcd);
   printf("\nGreatest Common Divisor (GCD) of %d %d ", number_one_for_gcd, number_two_for_gcd);
   printf("is %d \n", gcd(number_one_for_gcd, number_two_for_gcd));
+
+  printf("-------------------- least common multiple (LCM) --------------------");
+  int number_one_for_lcm;
+  int number_two_for_lcm;
+  printf("\nEnter 2 numbers two find least common multiple (LCM) of those numbers \n");
+  scanf("%d", &number_one_for_lcm);
+  scanf("%d", &number_two_for_lcm);
+  printf("\nLeast Common Multiple (LCM) of %d %d ", number_one_for_lcm, number_two_for_lcm);
+  printf("is %d \n", lcm(number_one_for_lcm, number_two_for_lcm));
 }
