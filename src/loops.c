@@ -11,8 +11,8 @@ unsigned int factorial(int number)
   return fact;
 }
 
-int fibonacci_series(int limit);
-int fibonacci_series(int limit)
+int print_fibonacci_series(int limit);
+int print_fibonacci_series(int limit)
 {
   unsigned int first_term = 0;
   unsigned int second_term = 1;
@@ -39,8 +39,8 @@ unsigned char is_odd(int number)
   return !is_even(number);
 }
 
-int odd_number_series(int starting_range, int ending_range);
-int odd_number_series(int starting_range, int ending_range)
+int print_odd_number_series(int starting_range, int ending_range);
+int print_odd_number_series(int starting_range, int ending_range)
 {
   for (int number = starting_range; number <= ending_range; number++)
   {
@@ -50,8 +50,8 @@ int odd_number_series(int starting_range, int ending_range)
   return 0;
 }
 
-int even_number_series(int starting_range, int ending_range);
-int even_number_series(int starting_range, int ending_range)
+int print_even_number_series(int starting_range, int ending_range);
+int print_even_number_series(int starting_range, int ending_range)
 {
   for (int number = starting_range; number <= ending_range; number++)
   {
@@ -97,8 +97,8 @@ long int sum_of_even_numbers(int starting_range, int ending_range)
   return sum;
 }
 
-int odd_number_series_backwards(int starting_range, int ending_range);
-int odd_number_series_backwards(int starting_range, int ending_range)
+int print_odd_number_series_backwards(int starting_range, int ending_range);
+int print_odd_number_series_backwards(int starting_range, int ending_range)
 {
   for (int number = starting_range; number >= ending_range; number--)
   {
@@ -108,8 +108,8 @@ int odd_number_series_backwards(int starting_range, int ending_range)
   return 0;
 }
 
-int multiplication_table(int number, int limit);
-int multiplication_table(int number, int limit)
+int print_multiplication_table(int number, int limit);
+int print_multiplication_table(int number, int limit)
 {
   for (int index = 1; index <= limit; index++)
   {
@@ -118,8 +118,8 @@ int multiplication_table(int number, int limit)
   return 0;
 }
 
-int every_nth_number(int starting_range, int ending_range, int increment_by);
-int every_nth_number(int starting_range, int ending_range, int increment_by)
+int print_every_nth_number(int starting_range, int ending_range, int increment_by);
+int print_every_nth_number(int starting_range, int ending_range, int increment_by)
 {
   for (int number = starting_range; number <= ending_range; number += increment_by)
   {
@@ -142,7 +142,7 @@ int main(void)
   printf("\nEnter the limit for fibonacci series\n");
   scanf("%d", &number_for_fibonacci);
   printf("First %d Fibonacci numbers\n", number_for_fibonacci);
-  fibonacci_series(number_for_fibonacci);
+  print_fibonacci_series(number_for_fibonacci);
 
   printf("-------------------- Odd Number Series --------------------");
   int starting_range_for_odd_series;
@@ -151,7 +151,7 @@ int main(void)
   scanf("%d", &starting_range_for_odd_series);
   scanf("%d", &ending_range_for_odd_series);
   printf("Odd Number Series Between %d and %d is\n", starting_range_for_odd_series, ending_range_for_odd_series);
-  odd_number_series(starting_range_for_odd_series, ending_range_for_odd_series);
+  print_odd_number_series(starting_range_for_odd_series, ending_range_for_odd_series);
 
   printf("-------------------- Even Number Series --------------------");
   int starting_range_for_even_series;
@@ -160,7 +160,7 @@ int main(void)
   scanf("%d", &starting_range_for_even_series);
   scanf("%d", &ending_range_for_even_series);
   printf("Even Number Series Between %d and %d is\n", starting_range_for_even_series, ending_range_for_even_series);
-  even_number_series(starting_range_for_even_series, ending_range_for_even_series);
+  print_even_number_series(starting_range_for_even_series, ending_range_for_even_series);
 
   printf("-------------------- Sum of Numbers --------------------");
   int starting_range_for_sum_of_numbers;
@@ -196,7 +196,7 @@ int main(void)
   scanf("%d", &starting_range_for_odd_series_backwards);
   scanf("%d", &ending_range_for_odd_series_backwards);
   printf("Odd Number Series Backwards Between %d and %d is\n", starting_range_for_odd_series_backwards, ending_range_for_odd_series_backwards);
-  odd_number_series_backwards(starting_range_for_odd_series_backwards, ending_range_for_odd_series_backwards);
+  print_odd_number_series_backwards(starting_range_for_odd_series_backwards, ending_range_for_odd_series_backwards);
 
   printf("-------------------- Multiplication Table --------------------");
   int number_for_multiplication_table;
@@ -205,7 +205,7 @@ int main(void)
   scanf("%d", &number_for_multiplication_table);
   scanf("%d", &limit_for_multiplication_table);
   printf("Multiplication Table of %d upto %d is\n", number_for_multiplication_table, limit_for_multiplication_table);
-  multiplication_table(number_for_multiplication_table, limit_for_multiplication_table);
+  print_multiplication_table(number_for_multiplication_table, limit_for_multiplication_table);
 
   printf("-------------------- Every nth Number --------------------");
   int starting_range_for_every_nth_number;
@@ -217,5 +217,5 @@ int main(void)
   printf("Enter nth value\n");
   scanf("%d", &nth_value);
   printf("Every %dth Number Between %d and %d is\n", nth_value, starting_range_for_every_nth_number, ending_range_for_every_nth_number);
-  every_nth_number(starting_range_for_every_nth_number, ending_range_for_every_nth_number, nth_value);
+  print_every_nth_number(starting_range_for_every_nth_number, ending_range_for_every_nth_number, nth_value);
 }
