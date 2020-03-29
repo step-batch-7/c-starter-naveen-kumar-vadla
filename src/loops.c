@@ -108,6 +108,16 @@ int odd_number_series_backwards(int starting_range, int ending_range)
   return 0;
 }
 
+int multiplication_table(int number, int limit);
+int multiplication_table(int number, int limit)
+{
+  for (int index = 1; index <= limit; index++)
+  {
+    printf("%d X %d = %d\n", number, index, number * index);
+  }
+  return 0;
+}
+
 int main(void)
 {
   printf("-------------------- Factorial --------------------");
@@ -176,4 +186,13 @@ int main(void)
   scanf("%d", &ending_range_for_odd_series_backwards);
   printf("Odd Number Series Backwards Between %d and %d is\n", starting_range_for_odd_series_backwards, ending_range_for_odd_series_backwards);
   odd_number_series_backwards(starting_range_for_odd_series_backwards, ending_range_for_odd_series_backwards);
+
+  printf("-------------------- Multiplication Table --------------------");
+  int number_for_multiplication_table;
+  int limit_for_multiplication_table;
+  printf("\nEnter the number and limit for multiplication table\n");
+  scanf("%d", &number_for_multiplication_table);
+  scanf("%d", &limit_for_multiplication_table);
+  printf("Multiplication Table of %d upto %d is\n", number_for_multiplication_table, limit_for_multiplication_table);
+  multiplication_table(number_for_multiplication_table, limit_for_multiplication_table);
 }
