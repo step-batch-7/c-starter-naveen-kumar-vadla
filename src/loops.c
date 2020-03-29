@@ -27,6 +27,29 @@ int fibonacci_series(int limit)
   return 0;
 }
 
+unsigned char is_even(int number);
+unsigned char is_even(int number)
+{
+  return number % 2 == 0;
+}
+
+unsigned char is_odd(int number);
+unsigned char is_odd(int number)
+{
+  return !is_even(number);
+}
+
+int odd_number_series(int starting_range, int ending_range);
+int odd_number_series(int starting_range, int ending_range)
+{
+  for (int number = starting_range; number <= ending_range; number++)
+  {
+    is_odd(number) && printf("%d ", number);
+  }
+  printf("\n");
+  return 0;
+}
+
 int main(void)
 {
   printf("-------------------- Factorial --------------------");
@@ -41,4 +64,13 @@ int main(void)
   scanf("%d", &number_for_fibonacci);
   printf("First %d Fibonacci numbers\n", number_for_fibonacci);
   fibonacci_series(number_for_fibonacci);
+
+  printf("-------------------- Odd Number Series --------------------");
+  int starting_range_for_odd_series;
+  int ending_range_for_odd_series;
+  printf("\nEnter the starting and ending range for odd number series\n");
+  scanf("%d", &starting_range_for_odd_series);
+  scanf("%d", &ending_range_for_odd_series);
+  printf("Odd number Series Between %d and %d\n", starting_range_for_odd_series, ending_range_for_odd_series);
+  odd_number_series(starting_range_for_odd_series, ending_range_for_odd_series);
 }
