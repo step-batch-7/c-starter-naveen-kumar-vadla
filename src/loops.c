@@ -118,6 +118,17 @@ int multiplication_table(int number, int limit)
   return 0;
 }
 
+int every_nth_number(int starting_range, int ending_range, int increment_by);
+int every_nth_number(int starting_range, int ending_range, int increment_by)
+{
+  for (int number = starting_range; number <= ending_range; number += increment_by)
+  {
+    printf("%d ", number);
+  }
+  printf("\n");
+  return 0;
+}
+
 int main(void)
 {
   printf("-------------------- Factorial --------------------");
@@ -195,4 +206,16 @@ int main(void)
   scanf("%d", &limit_for_multiplication_table);
   printf("Multiplication Table of %d upto %d is\n", number_for_multiplication_table, limit_for_multiplication_table);
   multiplication_table(number_for_multiplication_table, limit_for_multiplication_table);
+
+  printf("-------------------- Every nth Number --------------------");
+  int starting_range_for_every_nth_number;
+  int ending_range_for_every_nth_number;
+  int nth_value;
+  printf("\nEnter the number and limit for multiplication table\n");
+  scanf("%d", &starting_range_for_every_nth_number);
+  scanf("%d", &ending_range_for_every_nth_number);
+  printf("Enter nth value\n");
+  scanf("%d", &nth_value);
+  printf("Every %dth Number Between %d and %d is\n", nth_value, starting_range_for_every_nth_number, ending_range_for_every_nth_number);
+  every_nth_number(starting_range_for_every_nth_number, ending_range_for_every_nth_number, nth_value);
 }
