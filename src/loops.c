@@ -50,6 +50,17 @@ int odd_number_series(int starting_range, int ending_range)
   return 0;
 }
 
+int even_number_series(int starting_range, int ending_range);
+int even_number_series(int starting_range, int ending_range)
+{
+  for (int number = starting_range; number <= ending_range; number++)
+  {
+    is_even(number) && printf("%d ", number);
+  }
+  printf("\n");
+  return 0;
+}
+
 int main(void)
 {
   printf("-------------------- Factorial --------------------");
@@ -71,6 +82,15 @@ int main(void)
   printf("\nEnter the starting and ending range for odd number series\n");
   scanf("%d", &starting_range_for_odd_series);
   scanf("%d", &ending_range_for_odd_series);
-  printf("Odd number Series Between %d and %d\n", starting_range_for_odd_series, ending_range_for_odd_series);
+  printf("Odd Number Series Between %d and %d\n", starting_range_for_odd_series, ending_range_for_odd_series);
   odd_number_series(starting_range_for_odd_series, ending_range_for_odd_series);
+
+  printf("-------------------- Even Number Series --------------------");
+  int starting_range_for_even_series;
+  int ending_range_for_even_series;
+  printf("\nEnter the starting and ending range for even number series\n");
+  scanf("%d", &starting_range_for_even_series);
+  scanf("%d", &ending_range_for_even_series);
+  printf("Even Number Series Between %d and %d\n", starting_range_for_even_series, ending_range_for_even_series);
+  even_number_series(starting_range_for_even_series, ending_range_for_even_series);
 }
