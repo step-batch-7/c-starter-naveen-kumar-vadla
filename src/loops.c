@@ -72,6 +72,17 @@ long int sum_of_numbers(int starting_range, int ending_range)
   return sum;
 }
 
+long int product_of_numbers(int starting_range, int ending_range);
+long int product_of_numbers(int starting_range, int ending_range)
+{
+  long int product = 1;
+  for (int number = starting_range; number <= ending_range; number++)
+  {
+    product *= number;
+  }
+  return product;
+}
+
 int main(void)
 {
   printf("-------------------- Factorial --------------------");
@@ -108,9 +119,18 @@ int main(void)
   printf("-------------------- Sum of Numbers --------------------");
   int starting_range_for_sum_of_numbers;
   int ending_range_for_sum_of_numbers;
-  printf("\nEnter the starting and ending range for even number series\n");
+  printf("\nEnter the starting and ending range for sum of numbers\n");
   scanf("%d", &starting_range_for_sum_of_numbers);
   scanf("%d", &ending_range_for_sum_of_numbers);
   printf("Sum Of Numbers Between %d and %d ", starting_range_for_sum_of_numbers, ending_range_for_sum_of_numbers);
   printf("is %ld\n", sum_of_numbers(starting_range_for_sum_of_numbers, ending_range_for_sum_of_numbers));
+
+  printf("-------------------- Product of Numbers --------------------");
+  int starting_range_for_product_of_numbers;
+  int ending_range_for_product_of_numbers;
+  printf("\nEnter the starting and ending range for product of numbers\n");
+  scanf("%d", &starting_range_for_product_of_numbers);
+  scanf("%d", &ending_range_for_product_of_numbers);
+  printf("Product Of Numbers Between %d and %d ", starting_range_for_product_of_numbers, ending_range_for_product_of_numbers);
+  printf("is %ld\n", product_of_numbers(starting_range_for_product_of_numbers, ending_range_for_product_of_numbers));
 }
