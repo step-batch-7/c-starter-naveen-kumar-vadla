@@ -154,11 +154,10 @@ int main(void)
   scanf("%d", &rate_of_interest_for_SI);
   printf("Enter time period for Simple Interest in years\n");
   scanf("%d", &time_period_for_SI);
-  printf("\nSimple Interest for \n");
-  printf(" Principle Amount %ld \n", principle_amount_for_SI);
-  printf(" Rate of Interest %d \n", rate_of_interest_for_SI);
-  printf(" Time Period %d years \n", time_period_for_SI);
-  printf("is %f \n", simple_interest(principle_amount_for_SI, rate_of_interest_for_SI, time_period_for_SI));
+  printf("\nPrinciple Amount %ldRs.\n", principle_amount_for_SI);
+  printf("Rate of Interest %d%%\n", rate_of_interest_for_SI);
+  printf("Time Period %dyrs\n", time_period_for_SI);
+  printf("Simple Interest is %f \n", simple_interest(principle_amount_for_SI, rate_of_interest_for_SI, time_period_for_SI));
 
   printf("-------------------- compound interest --------------------");
   long int principle_amount_for_CI;
@@ -174,26 +173,25 @@ int main(void)
   scanf("%d", &time_period_for_CI);
   printf("Enter number of compounds per year for Compound Interest \n");
   scanf("%d", &compounds_per_year_for_CI);
-  printf("\nCompound Interest for \n");
-  printf(" Principle Amount %ld \n", principle_amount_for_CI);
-  printf(" Rate of Interest %d \n", rate_of_interest_for_CI);
-  printf(" Time Period %d years \n", time_period_for_CI);
-  printf(" No of Compounds in year %d \n", compounds_per_year_for_CI);
-  printf("is %f \n", compound_interest(principle_amount_for_CI, rate_of_interest_for_CI, time_period_for_CI, compounds_per_year_for_CI));
+  printf("\nPrinciple Amount %ldRs.\n", principle_amount_for_CI);
+  printf("Rate of Interest %d%%\n", rate_of_interest_for_CI);
+  printf("Time Period %dyrs\n", time_period_for_CI);
+  printf("No of Compounds %d per year\n", compounds_per_year_for_CI);
+  printf("Compound Interest is %f \n", compound_interest(principle_amount_for_CI, rate_of_interest_for_CI, time_period_for_CI, compounds_per_year_for_CI));
 
   printf("-------------------- fahrenheit to centigrade --------------------");
   int temperature_in_fahrenheit;
   printf("\nEnter the temperature in fahrenheit to convert into centigrade \n");
   scanf("%d", &temperature_in_fahrenheit);
-  printf("\nTemperature in Centigrade for fahrenheit temperature %d ", temperature_in_fahrenheit);
-  printf("is %f C\n", convert_to_centigrade(temperature_in_fahrenheit));
+  printf("\nTemperature in Fahrenheit %dF\n", temperature_in_fahrenheit);
+  printf("Temperature in Centigrade %fC\n", convert_to_centigrade(temperature_in_fahrenheit));
 
   printf("-------------------- centigrade to fahrenheit --------------------");
   int temperature_in_centigrade;
   printf("\nEnter the temperature in centigrade to convert into fahrenheit \n");
   scanf("%d", &temperature_in_centigrade);
-  printf("\nTemperature in Fahrenheit for centigrade temperature %d ", temperature_in_centigrade);
-  printf("is %f F\n", convert_to_fahrenheit(temperature_in_centigrade));
+  printf("\nTemperature in Centigrade %dC\n", temperature_in_centigrade);
+  printf("Temperature in Fahrenheit %fF\n", convert_to_fahrenheit(temperature_in_centigrade));
 
   printf("-------------------- greatest common divisor (GCD) --------------------");
   int number_one_for_gcd;
