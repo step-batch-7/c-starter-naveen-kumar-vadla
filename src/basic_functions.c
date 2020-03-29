@@ -61,6 +61,12 @@ float convert_to_centigrade(int temperature)
   return (temperature - 32) * (5.00 / 9.00);
 }
 
+float convert_to_fahrenheit(int temperature);
+float convert_to_fahrenheit(int temperature)
+{
+  return temperature * (9.00 / 5.00) + 32;
+}
+
 int main(void)
 {
   printf("-------------------- is_even --------------------");
@@ -151,6 +157,13 @@ int main(void)
   int temperature_in_fahrenheit;
   printf("\nEnter the temperature in fahrenheit to convert into centigrade \n");
   scanf("%d", &temperature_in_fahrenheit);
-  printf("\nTemperature in centigrade for fahrenheit temperature %d ", temperature_in_fahrenheit);
-  printf("is %f\n", convert_to_centigrade(temperature_in_fahrenheit));
+  printf("\nTemperature in Centigrade for fahrenheit temperature %d ", temperature_in_fahrenheit);
+  printf("is %f C\n", convert_to_centigrade(temperature_in_fahrenheit));
+
+  printf("-------------------- centigrade to fahrenheit --------------------");
+  int temperature_in_centigrade;
+  printf("\nEnter the temperature in centigrade to convert into fahrenheit \n");
+  scanf("%d", &temperature_in_centigrade);
+  printf("\nTemperature in Fahrenheit for centigrade temperature %d ", temperature_in_centigrade);
+  printf("is %f F\n", convert_to_fahrenheit(temperature_in_centigrade));
 }
