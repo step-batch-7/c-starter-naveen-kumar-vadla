@@ -55,6 +55,12 @@ float compound_interest(long int principle, int interest_rate, int time_period, 
   return (principle * pow(1 + (interest_rate / (100.00 * compounds_per_year)), (compounds_per_year * time_period))) - principle;
 }
 
+float convert_to_centigrade(int temperature);
+float convert_to_centigrade(int temperature)
+{
+  return (temperature - 32) * (5.00 / 9.00);
+}
+
 int main(void)
 {
   printf("-------------------- is_even --------------------");
@@ -89,8 +95,8 @@ int main(void)
   scanf("%d", &number_one_for_average);
   scanf("%d", &number_two_for_average);
   scanf("%d", &number_three_for_average);
-  printf("\nAverage of %d %d %d", number_one_for_average, number_two_for_average, number_three_for_average);
-  printf("s %f \n", average(number_one_for_average, number_two_for_average, number_three_for_average));
+  printf("\nAverage of %d %d %d ", number_one_for_average, number_two_for_average, number_three_for_average);
+  printf("is %f \n", average(number_one_for_average, number_two_for_average, number_three_for_average));
 
   printf("-------------------- greatest of 3 --------------------");
   int number_one_for_greatest;
@@ -100,8 +106,8 @@ int main(void)
   scanf("%d", &number_one_for_greatest);
   scanf("%d", &number_two_for_greatest);
   scanf("%d", &number_three_for_greatest);
-  printf("\nGreatest of %d %d %d", number_one_for_greatest, number_two_for_greatest, number_three_for_greatest);
-  printf(" is %d \n", greatest_of_three(number_one_for_greatest, number_two_for_greatest, number_three_for_greatest));
+  printf("\nGreatest of %d %d %d ", number_one_for_greatest, number_two_for_greatest, number_three_for_greatest);
+  printf("is %d \n", greatest_of_three(number_one_for_greatest, number_two_for_greatest, number_three_for_greatest));
 
   printf("-------------------- simple interest --------------------");
   long int principle_amount_for_SI;
@@ -140,4 +146,11 @@ int main(void)
   printf(" Time Period %d years \n", time_period_for_CI);
   printf(" No of Compounds in year %d \n", compounds_per_year_for_CI);
   printf("is %f \n", compound_interest(principle_amount_for_CI, rate_of_interest_for_CI, time_period_for_CI, compounds_per_year_for_CI));
+
+  printf("-------------------- fahrenheit to centigrade --------------------");
+  int temperature_in_fahrenheit;
+  printf("\nEnter the temperature in fahrenheit to convert into centigrade \n");
+  scanf("%d", &temperature_in_fahrenheit);
+  printf("\nTemperature in centigrade for fahrenheit temperature %d ", temperature_in_fahrenheit);
+  printf("is %f\n", convert_to_centigrade(temperature_in_fahrenheit));
 }
