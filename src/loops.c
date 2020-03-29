@@ -97,6 +97,17 @@ long int sum_of_even_numbers(int starting_range, int ending_range)
   return sum;
 }
 
+int odd_number_series_backwards(int starting_range, int ending_range);
+int odd_number_series_backwards(int starting_range, int ending_range)
+{
+  for (int number = starting_range; number >= ending_range; number--)
+  {
+    is_odd(number) && printf("%d ", number);
+  }
+  printf("\n");
+  return 0;
+}
+
 int main(void)
 {
   printf("-------------------- Factorial --------------------");
@@ -156,4 +167,13 @@ int main(void)
   scanf("%d", &ending_range_for_sum_of_even_numbers);
   printf("Sum Of Even Numbers Between %d and %d ", starting_range_for_sum_of_even_numbers, ending_range_for_sum_of_even_numbers);
   printf("is %ld\n", sum_of_even_numbers(starting_range_for_sum_of_even_numbers, ending_range_for_sum_of_even_numbers));
+
+  printf("-------------------- Odd Number Series Backwards --------------------");
+  int starting_range_for_odd_series_backwards;
+  int ending_range_for_odd_series_backwards;
+  printf("\nEnter the starting and ending range for odd number series backwards\n");
+  scanf("%d", &starting_range_for_odd_series_backwards);
+  scanf("%d", &ending_range_for_odd_series_backwards);
+  printf("Odd Number Series Backwards Between %d and %d is\n", starting_range_for_odd_series_backwards, ending_range_for_odd_series_backwards);
+  odd_number_series_backwards(starting_range_for_odd_series_backwards, ending_range_for_odd_series_backwards);
 }
