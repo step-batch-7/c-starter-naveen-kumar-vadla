@@ -9,7 +9,7 @@ filename=$1
 # Get outputfile name without the .c extension
 output_filename=`echo $filename | sed 's/.*\/\(.*\)\.c/\1/'`
 
-# Compile the program with -o option to specify the name of the binary
+# Compile the program with -o option and specify the name of the binary file
 gcc -o outputs/$output_filename.out $filename
 
 # If there were no compilation errors, run the program
