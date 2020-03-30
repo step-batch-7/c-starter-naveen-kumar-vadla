@@ -53,4 +53,6 @@ int main(void)
   scanf("%u", &amount);
   printf("\nAmount: Rs. %u\n\n", amount);
   print_currency_breakdown(amount);
+
+  return 0;
 }

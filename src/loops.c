@@ -218,4 +218,6 @@ int main(void)
   scanf("%d", &nth_value);
   printf("Every %dth Number Between %d and %d is\n", nth_value, starting_range_for_every_nth_number, ending_range_for_every_nth_number);
   print_every_nth_number(starting_range_for_every_nth_number, ending_range_for_every_nth_number, nth_value);
+
+  return 0;
 }

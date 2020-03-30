@@ -210,4 +210,6 @@ int main(void)
   scanf("%d", &number_two_for_lcm);
   printf("\nLeast Common Multiple (LCM) of %d %d ", number_one_for_lcm, number_two_for_lcm);
   printf("is %d \n", lcm(number_one_for_lcm, number_two_for_lcm));
+
+  return 0;
 }
