@@ -25,8 +25,8 @@ int cube(int number)
   return number * square(number);
 }
 
-float average(int number_one, int number_two, int number_three);
-float average(int number_one, int number_two, int number_three)
+float average(float number_one, float number_two, float number_three);
+float average(float number_one, float number_two, float number_three)
 {
   return (number_one + number_two + number_three) / 3.00;
 }
@@ -122,14 +122,14 @@ int main(void)
   printf("\nCube of %d is %d \n", number_for_cube, cube(number_for_cube));
 
   printf("-------------------- average --------------------");
-  int number_one_for_average;
-  int number_two_for_average;
-  int number_three_for_average;
+  float number_one_for_average;
+  float number_two_for_average;
+  float number_three_for_average;
   printf("\nEnter 3 numbers two calculate average \n");
-  scanf("%d", &number_one_for_average);
-  scanf("%d", &number_two_for_average);
-  scanf("%d", &number_three_for_average);
-  printf("\nAverage of %d %d %d ", number_one_for_average, number_two_for_average, number_three_for_average);
+  scanf("%f", &number_one_for_average);
+  scanf("%f", &number_two_for_average);
+  scanf("%f", &number_three_for_average);
+  printf("\nAverage of %f %f %f ", number_one_for_average, number_two_for_average, number_three_for_average);
   printf("is %f \n", average(number_one_for_average, number_two_for_average, number_three_for_average));
 
   printf("-------------------- greatest of 3 --------------------");
