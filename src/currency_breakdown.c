@@ -49,7 +49,8 @@ int print_currency_breakdown(unsigned int amount)
 int main(void)
 {
   unsigned int amount;
-  printf("Enter the Amount to calculate currency breakdown\n");
+  printf("-------------------- Currency Breakdown(ATM) --------------------");
+  printf("\nEnter the Amount to calculate currency breakdown\n");
   scanf("%u", &amount);
   printf("\nAmount: Rs. %u\n\n", amount);
   print_currency_breakdown(amount);
